@@ -1,0 +1,7 @@
+Allocate on GPU (cudaMalloc)
+Copy data to GPU (cudaMemcpy Host→Device)
+Launch kernel (<<<blocks, threads>>>)
+Copy results back (cudaMemcpy Device→Host)
+Free GPU memory (cudaFree)
+
+Rule: Always (destination, source, size, direction)
