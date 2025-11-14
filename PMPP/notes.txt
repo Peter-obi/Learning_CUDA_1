@@ -1,1 +1,9 @@
 linear_id = threadIdx.z * (blockDim.x * blockDim.y) + threadIdx.y * blockDim.x + threadIdx.x
+
+How many threads per "xy-plane"
+→ that’s blockDim.x * blockDim.y
+
+How many threads per row
+→ that’s blockDim.x
+
+x moves fastest, then y, then z.
