@@ -7,3 +7,9 @@ How many threads per row
 → that’s blockDim.x
 
 x moves fastest, then y, then z.
+
+Logical instruction stream = SIMT
+
+Physical datapath execution = SIMD
+
+Programming abstraction = SPMD
