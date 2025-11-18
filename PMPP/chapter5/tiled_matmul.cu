@@ -16,7 +16,7 @@ __global__ void matrixMulkernel(float* M, float* N, float* P, int Width){
     float Pvalue = 0;
     for(int ph = 0; ph < Width/TILE_WIDTH; ++ph){
 
-        //Collaborative loading of MA nd N into shared memory
+        //Collaborative loading of M and N into shared memory
         Mds[ty][tx] = M[Row*Width + ph*TILE_WIDTH + tx];
         Nds[ty][tx] = N[(ph*TILE_WIDTH + ty) * Width + Col];
         __syncthreads();
